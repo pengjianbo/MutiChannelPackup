@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+// load properties
+Properties properties = new Properties()
+properties.load(project.rootProject.file('channels.properties').newDataInputStream())
+String channelDefault = properties.getProperty('channel.default')
+String channleList = properties.getProperty('channel.list')
+String[] channelArray = channleList.split(',')
+
+android {
+    defaultConfig {
+        // dex突破65535的限制
+        multiDexEnabled true
+        // 默认是umeng的渠道
+        manifestPlaceholders = [CHANNEL_VALUE: channelDefault]
+    }
+
+    productFlavors {
+        for (int i = 0 ; i < channelArray.size(); i++) {
+            def channel = channelArray[i]
+            "${channel}"{
+                manifestPlaceholders = [CHANNEL_VALUE: channel]
+            }
+        }
+    }
+}
+
