@@ -98,7 +98,7 @@ META-INF渠道识别详情请查看美团team博客 [点击查看](http://tech.m
 6、下载打包完成的渠道包
 
 ###**部分截图**
-![上传文件](https://github.com/pengjianbo/MutiChannelPackup/blob/master/images/web_channel_build_upload_file.tiff)![构建成功](https://github.com/pengjianbo/MutiChannelPackup/blob/master/images/web_channel_build_success.tiff)
+![上传文件](https://raw.githubusercontent.com/pengjianbo/MutiChannelPackup/master/images/web_channel_build_upload_file.tiff)![构建成功](https://raw.githubusercontent.com/pengjianbo/MutiChannelPackup/master/images/web_channel_build_success.tiff)
 
 ##Gradle版
 * 支持manifest渠道配置
