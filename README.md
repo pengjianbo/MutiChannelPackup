@@ -82,7 +82,7 @@ META-INF渠道识别详情请查看美团team博客 [点击查看](http://tech.m
         String[] split = ret.split(channelPrefix);
         String channel = "";
         if (split != null && split.length >= 2) {
-            channel = ret.substring(channelPrefix.length());
+            channel = ret.substring(key.length());
         }
         return channel;
     }
@@ -228,7 +228,7 @@ apply from: "../channels.gradle"
         String[] split = ret.split(channelPrefix);
         String channel = "";
         if (split != null && split.length >= 2) {
-            channel = ret.substring(channelPrefix.length());
+            channel = ret.substring(key.length());
         }
         return channel;
     }
@@ -314,7 +314,7 @@ python build-channels-script.py
         String[] split = ret.split(channelPrefix);
         String channel = "";
         if (split != null && split.length >= 2) {
-            channel = ret.substring(channelPrefix.length());
+            channel = ret.substring(key.length());
         }
         return channel;
     }
